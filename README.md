@@ -32,7 +32,7 @@
   (※ Mods 폴더 이하에 Korean 폴더가 존재하여야 정상입니다.)
 4. 다운로드 한 언어파일 [「`Mechwarrior-5-Korean-Language_<버전>.zip`」](https://github.com/angel606k/Mechwarrior-5-Korean-Localization/releases/latest))을 `\MW5Mercs\Content` 에 압축 해제합니다.
   (※ Content 폴더 이하에 Localization 폴더가 존재햐여야 정상입니다.)
-5. 멕워리어5를 실행하여 MODS -> Korean Localization_<버전> 모드를 활성화 후 게임을 재시작합니다.
+5. 멕워리어5 클랜를 실행하여 MODS -> Korean Localization_<버전> 모드를 활성화 후 게임을 재시작합니다.
 6. 재시작 후 Options -> Language 옵션을 Korea(South Korea)으로 선택하시면 언어 변경이 완료됩니다.
   (※ 한국어(북한) 언어는 번역 디버그용입니다.) 
 -->
@@ -47,6 +47,8 @@
 ![한글패치 적용 스크린샷 1](./screenshots/1.png)
 ![한글패치 적용 스크린샷 2](./screenshots/2.png)
 ![한글패치 적용 스크린샷 3](./screenshots/3.png)
+![한글패치 적용 스크린샷 4](./screenshots/4.png)
+![한글패치 적용 스크린샷 5](./screenshots/5.png)
 
 ## License
 
