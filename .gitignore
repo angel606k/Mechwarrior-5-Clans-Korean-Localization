@@ -1,1 +1,4 @@
-.\Build
+# 빌드 폴더
+Build/Source
+Build/Tools
+
