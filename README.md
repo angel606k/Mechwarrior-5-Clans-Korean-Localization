@@ -24,7 +24,7 @@
 (※ Mechwarrior_5_Clans_Korean_Localization.zip 파일을 다운로드 합니다.)<br>
 (※ Source code 의 다운로드는 불필요 합니다.)
 2. 맥워리어5 클랜이 설치된 디렉터리 (일반적으로 `C:\Program files\Steam\steamapps\common\MechWarrior 5 Clans`)로 이동합니다.
-3. 다운로드 한 파일 [Mechwarrior_5_Clans_Korean_Localization.zip](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest))파일의 압축을 해제하여 `\MW5Clans\Content` 에 복사합니다.
+3. 다운로드 한 파일 [Mechwarrior_5_Clans_Korean_Localization.zip](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest)의 압축을 해제하여 `\MW5Clans\Content` 에 복사합니다.
 4. 멕워리어5 클랜를 실행하여 Options -> Language 옵션을 Korea(South Korea)으로 선택하시면 언어 변경이 완료됩니다.
   (※ 한국어(북한) 언어는 번역 디버그용입니다.) 
 <!--
