@@ -20,7 +20,13 @@
 ### 디스코드: https://discord.gg/c5MeTpQ8D6 에 접속하셔서 확인 부탁드립니다!
 
 ## 1. 테스트 패치 다운로드 및 적용방법
-### 작성 중
+1. [Release](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest)에 있는 최신버전의 한글패치를 다운로드 합니다.<br>
+(※ Mechwarrior-5-Korean-Language_<버전>.zip 파일을 다운로드 합니다.)<br>
+(※ Source code 의 다운로드는 불필요 합니다.)
+2. 맥워리어5가 설치된 디렉터리 (일반적으로 `C:\Program files\Steam\steamapps\common\MechWarrior 5 Mercenaries`)로 이동합니다.
+3. 다운로드 한 파일 [「`Mechwarrior_5_Clans_Korean_Localization.zip`」](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest))파일의 압축을 해제하여 `\MW5Clans\Content` 에 복사합니다.
+4. 멕워리어5 클랜를 실행하여 Options -> Language 옵션을 Korea(South Korea)으로 선택하시면 언어 변경이 완료됩니다.
+  (※ 한국어(북한) 언어는 번역 디버그용입니다.) 
 <!--
 ## 1. 테스트 패치 다운로드 및 적용방법
 ### ([「`스팀 창작마당`」](https://steamcommunity.com/sharedfiles/filedetails/?id=2518884137)에서 모드를 구독하였을시 모드파일의 다운로드는 불필요합니다.)
@@ -37,10 +43,11 @@
   (※ 한국어(북한) 언어는 번역 디버그용입니다.) 
 -->
 ## 2. 번역/검수 및 피드백은 어디에서 할 수 있나요?
-・디시인사이드 배틀테크-맥워리어 마이너 갤러리를 참고하셔서 번역/검수에 참여하거나 피드백을 남겨주세요!<br>
+・[디시인사이드 배틀테크-맥워리어 마이너 갤러리](https://gall.dcinside.com/mgallery/board/lists?id=mwo) 또는 [디스코드](https://discord.gg/c5MeTpQ8D6) 를 참고하셔서 번역/검수에 참여하거나 피드백을 남겨주세요!<br>
 ・여러분들의 도움이 절실합니다!<br>
+<!--
 ### 「게임이 버전업 됨에 따라 번역문도 추가 예정입니다.」
-
+-->
 [![멕워리어 5 - 클랜 한글 번역 시트](./screenshots/dcgall.jpg)](https://docs.google.com/spreadsheets/d/1AoHF1gcY2FjVotVW_V6Uytf4zo-XGO7SFd5NrAFoggg/edit?usp=sharing)
 
 ## 스크린샷
