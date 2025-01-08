@@ -1,5 +1,5 @@
 # Mechwarrior 5 Clans 비공식 한글 패치
-[![GitHub](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TariTomo/MechwarriorOnline-Korean-Localization/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TariTomo/Mechwarrior-5-Clans-Korean-Localization/blob/master/LICENSE)
 [Steam - Tari_Tomo](https://steamcommunity.com/id/Tari_Tomo/)
 ![맥워리어 온라인 비공식 한글패치](./screenshots/main.jpg)
 
@@ -21,10 +21,10 @@
 
 ## 1. 테스트 패치 다운로드 및 적용방법
 1. [Release](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest)에 있는 최신버전의 한글패치를 다운로드 합니다.<br>
-(※ Mechwarrior-5-Korean-Language_<버전>.zip 파일을 다운로드 합니다.)<br>
+(※ Mechwarrior_5_Clans_Korean_Localization.zip 파일을 다운로드 합니다.)<br>
 (※ Source code 의 다운로드는 불필요 합니다.)
-2. 맥워리어5가 설치된 디렉터리 (일반적으로 `C:\Program files\Steam\steamapps\common\MechWarrior 5 Mercenaries`)로 이동합니다.
-3. 다운로드 한 파일 [「`Mechwarrior_5_Clans_Korean_Localization.zip`」](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest))파일의 압축을 해제하여 `\MW5Clans\Content` 에 복사합니다.
+2. 맥워리어5 클랜이 설치된 디렉터리 (일반적으로 `C:\Program files\Steam\steamapps\common\MechWarrior 5 Clans`)로 이동합니다.
+3. 다운로드 한 파일 [Mechwarrior_5_Clans_Korean_Localization.zip](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest))파일의 압축을 해제하여 `\MW5Clans\Content` 에 복사합니다.
 4. 멕워리어5 클랜를 실행하여 Options -> Language 옵션을 Korea(South Korea)으로 선택하시면 언어 변경이 완료됩니다.
   (※ 한국어(북한) 언어는 번역 디버그용입니다.) 
 <!--
