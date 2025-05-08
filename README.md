@@ -21,6 +21,9 @@
 ### 디스코드: https://discord.gg/c5MeTpQ8D6 에 접속하셔서 확인 부탁드립니다!
 
 ## 1. 테스트 패치 다운로드 및 적용방법
+### Microsoft Store (Xbox 게임패스)
+- 유정군의게임이야기 유튜브의 [메카닉 액션! [멕워리어 5: 클랜], 한글패치 플레이](https://youtu.be/rPl0k_YDFlU) 영상을 참고하시길 바랍니다.
+### 스팀 / 에픽스토어
 1. [Release](https://github.com/angel606k/Mechwarrior-5-Clans-Korean-Localization/releases/latest)에 있는 최신버전의 한글패치를 다운로드 합니다.<br>
 (※ Mechwarrior_5_Clans_Korean_Localization.zip 파일을 다운로드 합니다.)<br>
 (※ Source code 의 다운로드는 불필요 합니다.)
