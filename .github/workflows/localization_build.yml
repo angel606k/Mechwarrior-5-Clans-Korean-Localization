@@ -27,12 +27,14 @@ jobs:
             - name: Build Localization Release File
               run: |
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Release.locres.txt
-                move .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
+                dir .\.github\build\Korean
+                copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
             
             - name: Build Localization Debug File
               run: |
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Debug.locres.txt
-                move .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
+                dir .\.github\build\Korean
+                copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
             
             - name: Create Zip File
               run: powershell Compress-Archive -Path .\.github\build\Localization\ -DestinationPath result.zip
