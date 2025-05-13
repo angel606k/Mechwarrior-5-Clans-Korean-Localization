@@ -25,6 +25,7 @@ jobs:
             #     certutil -decode encoded.txt credentials.json
 
             - name: Build Localization Debug File
+              shell: cmd
               run: |
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
                 dir /s /b
