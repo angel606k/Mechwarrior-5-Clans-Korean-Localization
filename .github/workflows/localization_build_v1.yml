@@ -1,0 +1,41 @@
+name: Google Sheet to EXE
+
+on:
+    workflow_dispatch:
+
+jobs:
+    run:
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.11"
+
+            - name: Install dependencies
+              run: pip install gspread oauth2client
+
+            - name: Restore credentials.json
+              run: echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" | base64 -d > credentials.json
+
+            # - name: Fetch spreadsheet and save to input.txt
+            #   run: python fetch_sheet.py
+
+            - name: Build Localization Release File
+              run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Release.locres.txt
+            
+            - name: Build Localization Debug File
+              run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Debug.locres.txt
+
+            # - name: Zip result
+            #   run: powershell Compress-Archive -Path output.txt -DestinationPath result.zip
+
+            # - name: Upload ZIP artifact
+            #   uses: actions/upload-artifact@v4
+            #   with:
+            #       name: exe-result
+            #       path: result.zip
