@@ -16,16 +16,29 @@ jobs:
               with:
                   python-version: "3.11"
 
-            - name: Install dependencies
-              run: pip install gspread oauth2client
+            # - name: Install dependencies
+            #   run: pip install gspread oauth2client
 
-            - name: Restore credentials.json
-              run: |
-                echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
-                certutil -decode encoded.txt credentials.json
+            # - name: Restore credentials.json
+            #   run: |
+            #     echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
+            #     certutil -decode encoded.txt credentials.json
 
             - name: Build Localization Release File
-              run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Release.locres.txt
+              run: |
+                .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Release.locres.txt
+                move .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
             
             - name: Build Localization Debug File
-              run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Debug.locres.txt
+              run: |
+                .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Debug.locres.txt
+                move .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
+            
+            - name: Create Zip File
+              run: powershell Compress-Archive -Path .\.github\build\Localization\ -DestinationPath result.zip
+            
+            - name: Upload result
+              uses: actions/upload-artifact@v4
+              with:
+                name: exe-result
+                path: result.zip
