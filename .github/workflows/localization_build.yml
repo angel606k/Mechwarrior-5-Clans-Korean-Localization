@@ -20,7 +20,9 @@ jobs:
               run: pip install gspread oauth2client
 
             - name: Restore credentials.json
-              run: echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" | base64 -d > credentials.json
+              run: |
+                echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
+                certutil -decode encoded.txt credentials.json
 
             - name: Build Localization Release File
               run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe .\.github\build\Korean\Game_Release.locres.txt
