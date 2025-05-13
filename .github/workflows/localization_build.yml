@@ -24,31 +24,26 @@ jobs:
             #     echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
             #     certutil -decode encoded.txt credentials.json
 
-            - name: Build Localization Debug File
+            - name: Build Localization Release File
               shell: cmd
               run: |
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
-                dir /s /b
-                dir ./
                 copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
-
-            # - name: Build Localization Release File
-            #   run: |
-            #     .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
-            #     dir .\.github\build\Korean
-            #     copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
             
-            # - name: Build Localization Debug File
-            #   run: |
-            #     .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
-            #     dir .\.github\build\Korean
-            #     copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
+            - name: Build Localization Debug File
+              shell: cmd
+              run: |
+                .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
+                copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
             
             - name: Create Zip File
-              run: powershell Compress-Archive -Path .\.github\build\Localization\ -DestinationPath result.zip
+              run: |
+                $now = Get-Date -Uformat "%Y%m%d"
+                echo "NOW=$now" >> $env:GITHUB_ENV
+                powershell Compress-Archive -Path .\.github\build\Localization\ -DestinationPath Localization_$now.zip
             
             - name: Upload result
               uses: actions/upload-artifact@v4
               with:
-                name: exe-result
-                path: result.zip
+                name: Mechwarrior-5-Clans-Korean-Localization_Github-Actions-Build_${{ env.NOW }}
+                path: Localization_${{ env.NOW }}.zip
