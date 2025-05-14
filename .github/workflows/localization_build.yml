@@ -22,7 +22,7 @@ jobs:
 
             - name: Restore credentials.json
               run: |
-                echo "${{ secrets.GOOGLE_SHEET_CREDS_BASE64 }}" > encoded.txt
+                echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
                 certutil -decode encoded.txt credentials.json
 
             - name: Show credentials.json content
