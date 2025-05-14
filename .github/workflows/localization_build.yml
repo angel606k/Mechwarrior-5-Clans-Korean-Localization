@@ -26,6 +26,7 @@ jobs:
                 certutil -decode encoded.txt credentials.json
 
             - name: Save Google Sheet to Txt
+              shell: cmd
               run: |
                 python .\.github\script\google_sheet_to_txt.py
                 dir /s /b .\.github\script
