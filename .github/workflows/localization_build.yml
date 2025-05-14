@@ -25,9 +25,6 @@ jobs:
                 echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
                 certutil -decode encoded.txt credentials.json
 
-            - name: Show credentials.json content
-              run: type credentials.json
-
             - name: Save Google Sheet to Txt
               run: python .\.github\script\google_sheet_to_txt.py
 
