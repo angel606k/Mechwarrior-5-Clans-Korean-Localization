@@ -30,6 +30,9 @@ jobs:
               run: |
                 python .\.github\script\google_sheet_to_txt.py
                 dir /s /b .\.github\script
+            
+            - name: List all files after Python runs
+              run: dir /s /b
 
             - name: Build Localization Release File
               shell: cmd
