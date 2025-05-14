@@ -30,7 +30,7 @@ jobs:
             
             - name: List all files after Python runs
               shell: cmd
-              run: dir /s /b
+              run: dir .\.github /s /b
 
             - name: Build Localization Release File
               shell: cmd
