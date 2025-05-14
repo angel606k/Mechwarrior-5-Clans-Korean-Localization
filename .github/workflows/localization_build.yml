@@ -38,7 +38,7 @@ jobs:
                 move .\.github\script\Game_Release.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
                 copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
-                dir /s /b .\.github\build\
+                dir /s .\.github\build\
             
             - name: Build Localization Debug File
               shell: cmd
@@ -46,7 +46,7 @@ jobs:
                 move .\.github\script\Game_Debug.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
                 copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
-                dir /s /b .\.github\build\
+                dir /s .\.github\build\
             
             - name: Create Zip File
               run: |
