@@ -16,23 +16,28 @@ jobs:
               with:
                   python-version: "3.11"
 
-            # - name: Install dependencies
-            #   run: pip install gspread oauth2client
+            - name: Install dependencies
+              run: pip install gspread oauth2client
 
-            # - name: Restore credentials.json
-            #   run: |
-            #     echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
-            #     certutil -decode encoded.txt credentials.json
+            - name: Restore credentials.json
+              run: |
+                echo "${{ secrets.GOOGLE_CREDS_BASE64 }}" > encoded.txt
+                certutil -decode encoded.txt credentials.json
+
+            - name: Save Google Sheet to Txt
+              run: python .\.github\script\google_sheet_to_txt.py
 
             - name: Build Localization Release File
               shell: cmd
               run: |
+                move .\.github\script\Game_Release.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
                 copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
             
             - name: Build Localization Debug File
               shell: cmd
               run: |
+                move .\.github\script\Game_Debug.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
                 copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
             
