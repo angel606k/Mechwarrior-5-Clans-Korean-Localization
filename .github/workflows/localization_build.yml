@@ -5,6 +5,7 @@ on:
 
 jobs:
     run:
+        if: github.ref == 'refs/heads/localization-build-actions'
         runs-on: windows-latest
 
         steps:
