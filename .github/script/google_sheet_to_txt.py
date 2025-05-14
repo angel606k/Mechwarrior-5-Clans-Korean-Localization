@@ -8,8 +8,8 @@ client = gspread.authorize(creds)
 
 # 시트 이름 → 출력 파일명 매핑
 sheet_to_filename = {
-    "Translate Result": "Game_Release.locres.txt",
-    "Translate Result(Debug)": "Game_Debug.locres.txt"
+    "Translate Result": ".github/build/Korean/Game_Release.locres.txt",
+    "Translate Result(Debug)": ".github/build/Korean/Game_Debug.locres.txt"
 }
 
 # 각 시트 처리

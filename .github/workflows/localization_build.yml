@@ -34,20 +34,12 @@ jobs:
 
             - name: Build Localization Release File
               shell: cmd
-              run: move .\.github\script\Game_Release.locres.txt .\.github\build\Korean\
-
-            - name: Build Localization Release File
-              shell: cmd
-              run: .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
-
-            - name: Build Localization Release File
-              shell: cmd
-              run: copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
-
-            - name: Build Localization Release File
-              shell: cmd
-              run: dir /s /b .\.github\build\
-
+              run: |
+                move .\.github\script\Game_Release.locres.txt .\.github\build\Korean\
+                .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
+                copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
+                dir /s /b .\.github\build\
+            
             - name: Build Localization Debug File
               shell: cmd
               run: |
