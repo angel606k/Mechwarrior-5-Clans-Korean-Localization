@@ -26,7 +26,9 @@ jobs:
                 certutil -decode encoded.txt credentials.json
 
             - name: Save Google Sheet to Txt
-              run: python .\.github\script\google_sheet_to_txt.py
+              run: |
+                python .\.github\script\google_sheet_to_txt.py
+                dir .\.github\script /s /b
 
             - name: Build Localization Release File
               shell: cmd
@@ -34,7 +36,7 @@ jobs:
                 move .\.github\script\Game_Release.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Release.locres.txt
                 copy .\.github\build\Korean\Game_Release_NEW.locres .\.github\build\Localization\Game\ko-KR\Game.locres
-                dir .\.github\build\ /s
+                dir .\.github\build\ /s /b
             
             - name: Build Localization Debug File
               shell: cmd
@@ -42,7 +44,7 @@ jobs:
                 move .\.github\script\Game_Debug.locres.txt .\.github\build\Korean\
                 .\.github\build\UE4localizationsTool.v2.7\UE4localizationsTool.exe import .\.github\build\Korean\Game_Debug.locres.txt
                 copy .\.github\build\Korean\Game_Debug_NEW.locres .\.github\build\Localization\Game\ko-KP\Game.locres
-                dir .\.github\build\ /s
+                dir .\.github\build\ /s /b
             
             - name: Create Zip File
               run: |
